@@ -28,7 +28,7 @@ git config user.name "Github Action"
 git config user.email "actions@user.noreply.github.com"
 
 git checkout master
-modify_readme
+modify_readme "$1"
 git add -A
 git commit -m "Add some fact"
 git push $repo master
