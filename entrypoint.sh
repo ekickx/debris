@@ -17,6 +17,9 @@ modify_readme(){
 
   # Put $text in the newline after $start
   sed -i "/$start/ s/$/ \n$text/" "$(ls | grep -i readme)"
+
+  # Delete fact.json
+  rm fact.json
 }
 
 # Git initialization
