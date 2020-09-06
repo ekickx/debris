@@ -1,0 +1,12 @@
+name: 'Debris'
+description: 'Fetch useless fact to your readme'
+inputs:
+  fact_args:
+    description: 'Argumen'
+    required: true
+    default: 'today'
+runs:
+  using: 'docker'
+  image: 'dockerfile'
+  args:
+    - ${{ inputs.fact_args }}
