@@ -27,10 +27,10 @@ repo="https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.gi
 git config user.name "Github Action"
 git config user.email "actions@user.noreply.github.com"
 
-git checkout master
+git pull $repo master
 modify_readme "$1"
 git add -A
 git commit -m "Add some fact"
-git push $repo master
+git push -u $repo master
 
 
